@@ -232,13 +232,7 @@ for(moon in seq(from=6, to=78, by=8)){
       Cmean=((comp/100)*PERCENTAGE_PROFIT)+comp
       
       
-      
-      
-      for(z in 3:nrow(t)){
-        
-        t$BUY[z-2]=t$BUY[z]
-      }
-      
+    
       
       #Finding correlation between numeric variables in the dataset:
       #Filtering in numerical variables in the dataset:
