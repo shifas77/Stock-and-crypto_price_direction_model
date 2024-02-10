@@ -385,7 +385,7 @@ for(moon in seq(from=6, to=78, by=8)){
           Meancom=0
           threshold=0
           start=0.10
-          end=0.90
+          end=0.3
           for (THR in (start*100):(end*100)){
             
             mixx= sample(nrow(test_set))
@@ -408,7 +408,7 @@ for(moon in seq(from=6, to=78, by=8)){
             
             threshold[push]=THR/100
             
-            Meancom[push]=TAccuracy$byClass['Pos Pred Value']
+            Meancom[push]=TAccuracy
             push=push+1
           }
           BTHRES=as.data.frame(cbind(threshold,Meancom))
