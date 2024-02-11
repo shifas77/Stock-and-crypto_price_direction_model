@@ -264,7 +264,7 @@ for(moon in seq(from=6, to=78, by=8)){
       t$`t$BUY` <-ifelse(t$`t$BUY`==1, 0, 1)
       
       
-      fork=t[nrow(t),]
+    
       fork_repli=fork
       Target=fork[ncol(fork)]
       fork=fork[-ncol(fork)]
@@ -428,7 +428,7 @@ for(moon in seq(from=6, to=78, by=8)){
         
         
         
-        comp=getQuote(Logo[gon],src = "yahoo")
+     
         comp=comp$Last
         
         if(xgbpred[length(xgbpred)]==1&Accuracy$byClass['Balanced Accuracy']>(100-(WRONG/(nrow(test_set)/100)))/100){
