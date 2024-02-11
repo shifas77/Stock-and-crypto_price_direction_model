@@ -134,7 +134,7 @@ for(i in 1:length(tickers)){
   
   a=out$df.tickers
   
-  if(i==which(All_count==dafinal)[1]){
+  if(i==which(All_count==dafinal)){
     kera=25
     a=a%>% select(-ticker,-price.adjusted,-ret.adjusted.prices,-ret.closing.prices)
     a<- missRanger(a, pmm.k = 3, splitrule = "extratrees", num.trees = 100)
@@ -203,7 +203,7 @@ for(moon in seq(from=6, to=78, by=8)){
     
     
     PERCENTAGE_PROFIT=moon
-    Train_size=900
+    Train_size=90
     
     Cmean=((comp/100)*PERCENTAGE_PROFIT)+comp
     
@@ -248,7 +248,7 @@ for(moon in seq(from=6, to=78, by=8)){
       
       
       
-      UnCorrelated = findCorrelation(t_cor, cutoff=0.9)
+      UnCorrelated = findCorrelation(t_cor, cutoff=0.1)
       
       
       fin_uncornames=names(t_numint[,-c(UnCorrelated)])
