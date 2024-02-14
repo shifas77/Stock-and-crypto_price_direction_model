@@ -477,7 +477,7 @@ for(moon in seq(from=6, to=78, by=8)){
     write.csv(FinalCut, file = paste("FinalCut",Sys.Date(),".csv"))
   }
   cat("\n")
-  print("--------------------THE END--------------------")
+  print("--------------------FIN--------------------")
   
 }
 
